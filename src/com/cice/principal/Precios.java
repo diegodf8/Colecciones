@@ -16,14 +16,25 @@ public class Precios {
             eleccion = paux.mostrarMenu();
             System.out.println("Opcion: " + eleccion );
             if (eleccion == 1){
-                Precio.nuevoPrecio(lista);
-            } else if (eleccion == 5){
-                Precio.mostrarPrecios(lista);
+                paux.nuevoPrecio(lista);
+            }
+            else if (eleccion == 2){
+                System.out.println("El precio medio es: " + paux.precioMedio(lista));
+            }
+            else if (eleccion == 3){
+                System.out.println("El precio máximo es: " + paux.precioMaximo(lista));
+            }
+            else if (eleccion == 4){
+                System.out.println("El precio mínimo es: " + paux.precioMinimo(lista));
+            }
+            else if (eleccion == 5){
+                paux.mostrarPrecios(lista);
             }
 
         }
         while (eleccion != 0);
 
+        System.out.println("Adios");
 
     }
 

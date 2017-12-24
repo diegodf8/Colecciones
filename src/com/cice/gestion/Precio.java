@@ -32,8 +32,50 @@ public class Precio {
 
         for (int k: lista)
         {
-            System.out.println(k);
+            System.out.print(k +" ; ");
         }
-
+        System.out.println();
     }
+
+    public static double precioMedio(ArrayList<Integer> lista){
+
+        double precio = 0;
+        double aux = 0;
+        for (int k: lista)
+        {
+            aux+=k;
+        }
+        precio = aux/lista.size();
+        return precio;
+    }
+
+    public static int precioMaximo(ArrayList<Integer> lista){
+
+        int precio = 0;
+
+        for (int k: lista)
+        {
+            if (k > precio){
+             precio = k;
+            }
+        }
+        return precio;
+    }
+
+    public static int precioMinimo(ArrayList<Integer> lista){
+
+        int precio = 9999;
+
+        for (int k: lista)
+        {
+            if (k < precio){
+                precio = k;
+            }
+        }
+        return precio;
+    }
+
 }
+
+
+
